@@ -1,39 +1,18 @@
 package edu.unca.cburris.bukkit.castlewarsstats;
 
 import java.text.MessageFormat;
-import java.util.ArrayList;
-
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.Statistic;
-import org.bukkit.conversations.Conversation;
-import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
-import org.bukkit.event.Event;
-import org.bukkit.event.EventException;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
-import org.bukkit.event.block.BlockDamageEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
-import org.bukkit.event.entity.EntityDamageEvent;
-import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
-import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerExpChangeEvent;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
-import org.bukkit.event.player.PlayerItemHeldEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerLoginEvent;
-import org.bukkit.event.player.PlayerLoginEvent.Result;
-import org.bukkit.event.player.PlayerRespawnEvent;
-import org.bukkit.entity.Player;
-import com.avaje.ebean.SqlUpdate;
-import com.avaje.ebeaninternal.server.type.DataBind;
 
-import edu.unca.cburris.bukkit.castlewarsstats.*;
-import edu.unca.cburris.bukkit.castlewarsstats.util.ListStore;
 
 /*
  * This is a sample event listener
@@ -42,7 +21,6 @@ public class CWSListener implements Listener {
     private final CastleWarsStats plugin;
     private int deaths, deathIncrement, damagedealt, damageTaken, kills,pvpkills, PlayerEntityId;
     private String PlayersName;
-    public ListStore bannedPlayers;
     /*
      * This listener needs to know about the plugin which it came from
      */

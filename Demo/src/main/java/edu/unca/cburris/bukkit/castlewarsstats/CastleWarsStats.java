@@ -11,8 +11,7 @@ import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import edu.unca.cburris.bukkit.castlewarsstats.util.ListStore;
-import edu.unca.cburris.bukkit.commands.BanExecutor;
+
 
 
 
@@ -23,7 +22,7 @@ public class CastleWarsStats extends JavaPlugin {
 	/*
 	 * This is called when your plug-in is enabled
 	 */
-	public ListStore bannedPlayers;
+	
 	
 	
 	@Override
@@ -42,8 +41,7 @@ public class CastleWarsStats extends JavaPlugin {
 		
 		(new File(pluginFolder)).mkdirs();
 		
-		this.bannedPlayers = new ListStore(new File(pluginFolder + File.separator + "bannedPlayers.txt"));
-		this.bannedPlayers.load();
+		
 		
 
 		
@@ -70,7 +68,7 @@ public class CastleWarsStats extends JavaPlugin {
 	@Override
 	public void onDisable() {
 		saveDefaultConfig(); 
-		this.bannedPlayers.save();
+		
 		//log.info("FirstPlugin has been disabled")
 	}
 	@Override
